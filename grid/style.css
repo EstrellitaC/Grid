@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+    --primary-color: #d70000;
+    --grid-height: 250px;
+    --grid-gap: 10px;
+    --grid-padding: 20px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h1{
+    padding: 30px 30px;
+    color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+/*!Mejor practica*/
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, var(--grid-height));
+    grid-template-areas:
+        "one two three"
+        "one four five"
+        "six six seven";
+    gap: var(--grid-gap);
+    padding: var(--grid-padding);
+}
+
+.grid .one {
+    grid-area: one;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.grid .two {
+    grid-area: two;
+    width: 100%;
+    height: 100%;
+}
+
+.grid .three {
+    grid-area: three;
+    width: 100%;
+    height: 100%;
+}
+
+.grid .four {
+    grid-area: four;
+    width: 100%;
+    height: 100%;
+}
+
+.grid .five{
+    grid-area: five;
+    width: 100%;
+    height: 100%;
+}
+
+.grid .six {
+    grid-area: six;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.grid .seven {
+    grid-area: seven;
+    width: 100%;
+    height: 100%;
+}
